@@ -21,6 +21,9 @@ for ( let i = 0; i < cells.length; i++ ) {
 let colors = document.querySelectorAll('.color-swatch');
 //hold the picked color outside of the loop
 let pickedColor = "";
+//find and assign current color swatch
+let currentSwatch = document.querySelector('.current-color');
+
 //2a. put it in a loop so it applies to all swatches
 for ( let i = 0; i < colors.length; i++ ) {
   //2b. specify the one thing
@@ -30,6 +33,8 @@ for ( let i = 0; i < colors.length; i++ ) {
   let chooseColor = function () {
     //get and store id of selected swatch
     pickedColor = thisColor.id;
+    currentSwatch.id = pickedColor;
+    console.log(currentSwatch)
   }
 
   //3. hook up event listener to trigger fxn
