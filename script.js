@@ -35,3 +35,9 @@ for ( let i = 0; i < colors.length; i++ ) {
   //3. hook up event listener to trigger fxn
   thisColor.addEventListener("click", chooseColor);
 }
+
+//////
+//current color swatch
+//1. get current color location, set to variable
+
+//2. event li
