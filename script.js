@@ -1,3 +1,124 @@
+/////////MULTIPLY ROWS
+//thing to copy
+let cellRow =
+`
+<div class="row">
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
+</div>`
+
+//where to paste
+let canvas = document.querySelector('.canvas')
+let rows = ''
+
+let rowQty = Math.round(window.innerHeight*0.03)
+
+console.log(Math.round(window.innerHeight*0.025))
+
+for (let j = 0; j < rowQty; j++) {
+  rows += cellRow
+}
+
+canvas.innerHTML = rows
+
 /////////CLICK CELLS, CHANGE COLOR
 
 let cells = document.querySelectorAll('.cell');
