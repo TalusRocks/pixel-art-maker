@@ -70,42 +70,42 @@ body {
   justify-content: center;
 }
 
-#red {
+.red {
   background-color: red;
 }
 
-#orange {
+.orange {
   background-color: orange;
 }
 
-#yellow {
+.yellow {
   background-color: yellow;
 }
 
-#green {
+.green {
   background-color: green;
 }
 
-#lightblue {
+.lightblue {
   background-color: lightblue;
 }
 
-#blue {
+.blue {
   background-color: blue;
 }
 
-#purple {
+.purple {
   background-color: purple;
 }
 
-#gray {
+.gray {
   background-color: gray;
 }
 
-#black {
+.black {
   background-color: black;
 }
 
-#white {
+.white {
   background-color: white;
 }
