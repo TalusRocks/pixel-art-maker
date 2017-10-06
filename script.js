@@ -122,17 +122,44 @@ canvas.innerHTML = rows
 /////////CLICK CELLS, CHANGE COLOR
 
 let cells = document.querySelectorAll('.cell');
+let down = false
 
 for ( let i = 0; i < cells.length; i++ ) {
   let cell = cells[i];
 
   let changeColor = function () {
-    //cell.style.background = pickedColor;
     cell.classList.add(pickedColor)
   }
 
+
   cell.addEventListener("click", changeColor);
+
+  /////////COLOR ON MOUSE 'DRAG'
+
+  cell.addEventListener("mousedown", function() {
+    down = true
+    console.log(down)//true
+  })
+
+  cell.addEventListener("mouseenter", function() {
+    console.log("mouse before if", down)
+    if (down === true) {
+      cell.classList.add(pickedColor)
+      console.log("mouseenterrr")
+    }
+  })
+
+  cell.addEventListener("mouseup", function() {
+    down = false
+    console.log("STOPIT")
+  })
+
 }
+
+
+console.log(down)
+
+
 
 ////////CLICK PALETTE, SAVE COLOR
 
