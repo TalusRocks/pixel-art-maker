@@ -6,8 +6,8 @@ for ( let i = 0; i < cells.length; i++ ) {
   let cell = cells[i];
 
   let changeColor = function () {
-    cell.style.background = pickedColor;
-
+    //cell.style.background = pickedColor;
+    cell.classList.add(pickedColor)
   }
 
   cell.addEventListener("click", changeColor);
