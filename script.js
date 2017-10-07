@@ -126,6 +126,10 @@ for ( let i = 0; i < cells.length; i++ ) {
   let cell = cells[i];
 
   let changeColor = function () {
+    if (cell.classList.length >= 2) {
+      cell.classList.remove(cell.classList[cell.classList.length-1])
+      //prevents classList from continuing to grow
+    }
     cell.classList.add(pickedColor)
   }
 
@@ -165,8 +169,13 @@ for ( let i = 0; i < colors.length; i++ ) {
   let chooseColor = function () {
     //get and store id of selected swatch
     pickedColor = thisColor.classList[0];
+
+    if (currentSwatch.classList.length >= 2) {
+      currentSwatch.classList.remove(currentSwatch.classList[currentSwatch.classList.length-1])
+      //prevents classList from continuing to grow
+    }
+
     currentSwatch.classList.add(pickedColor)
   }
-
   thisColor.addEventListener("click", chooseColor);
 }
