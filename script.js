@@ -111,8 +111,6 @@ let rows = ''
 
 let rowQty = Math.round(window.innerHeight*0.03)
 
-console.log(Math.round(window.innerHeight*0.025))
-
 for (let j = 0; j < rowQty; j++) {
   rows += cellRow
 }
@@ -138,27 +136,19 @@ for ( let i = 0; i < cells.length; i++ ) {
 
   cell.addEventListener("mousedown", function() {
     down = true
-    console.log(down)//true
   })
 
   cell.addEventListener("mouseenter", function() {
-    console.log("mouse before if", down)
     if (down === true) {
       cell.classList.add(pickedColor)
-      console.log("mouseenterrr")
     }
   })
 
   cell.addEventListener("mouseup", function() {
     down = false
-    console.log("STOPIT")
   })
 
 }
-
-
-console.log(down)
-
 
 
 ////////CLICK PALETTE, SAVE COLOR
@@ -176,7 +166,6 @@ for ( let i = 0; i < colors.length; i++ ) {
     //get and store id of selected swatch
     pickedColor = thisColor.classList[0];
     currentSwatch.classList.add(pickedColor)
-    console.log(thisColor.classList[0])
   }
 
   thisColor.addEventListener("click", chooseColor);
